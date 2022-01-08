@@ -1,3 +1,4 @@
+// Open-Closed Principle
 let Color = Object.freeze({
   red: "red",
   green: "green",
@@ -33,7 +34,7 @@ class ProductFilter {
   }
 
   // state space explosion
-  // 3 criteria (+weight) = 7 methods
+  // 3 criteria (+weight) = 7 methods - not practical!
 
   // OCP = open for extension, closed for modification
 }
@@ -109,3 +110,5 @@ let spec = new AndSpecification(
 );
 for (let p of bf.filter(products, spec))
   console.log(` * ${p.name} is large and green`);
+
+//  note: OCP = open for extension(typically mean inheritance), closed for modification

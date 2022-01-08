@@ -1,3 +1,5 @@
+// Single Responsibility Principle
+// file system
 const fs = require("fs");
 
 class Journal {
@@ -51,8 +53,12 @@ j.addEntry("I cried today.");
 j.addEntry("I ate a bug.");
 console.log(j.toString());
 
-let p = new PersistenceManager();
-let filename = "c:/temp/journal.txt";
-p.saveToFile(j, filename);
+// let p = new PersistenceManager();
+// let filename = "c:/temp/journal.txt";
+// p.saveToFile(j, filename);
 
-// separation of concerns
+// note:
+// separation of concerns: try to split up into different several parts which are somehow related
+
+// there's a nasty pattern called god object
+// (has lots and lots responsibility, lots of Spaghetti code)
